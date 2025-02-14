@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+body {
+    font-family: 'Dancing Script', cursive; /* Letra cursiva */
+    text-align: center;
+    background: linear-gradient(-45deg, #ff4d6d, #ff99ac, #ffccd5, #ff4d6d);
+    background-size: 400% 400%;
+    animation: cambiarFondo 6s infinite alternate;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes cambiarFondo {
+    0% { background-color: #ff4d6d; }
+    50% { background-color: #ff99ac; }
+    100% { background-color: #ffccd5; }
+}
+
+.contenedor {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+h1, p {
+    color: #ff4d6d;
+}
+
+.boton {
+    background-color: #ff4d6d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #ff99ac;
+}
+
+/* Corazones flotantes */
+.corazon {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: flotar 5s infinite ease-in-out;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-100px); opacity: 0.6; }
+    100% { transform: translateY(-200px); opacity: 0; }
+}
